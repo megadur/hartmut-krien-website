@@ -1,0 +1,45 @@
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.contact-info h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact-details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.icon {
+  font-size: 1.5rem;
+  background-color: var(--secondary-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.contact-details a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.contact-details a:hover {
+  text-decoration: underline;
+}
