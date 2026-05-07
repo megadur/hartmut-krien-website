@@ -1,22 +1,30 @@
 <section id="referenzen" class="references section">
   <div class="container">
     <h2 class="section-title">Referenzen</h2>
-    <p class="text-center desc">Ein kleiner Auszug aus mehreren hunderten erfolgreich realisierten Projekten in über 30 Jahren.</p>
+    <p class="text-center desc">Ein kleiner Auszug aus unserem breiten Referenzportfolio von über hunderten Projekten.</p>
+
+    <div class="detailed-projects">
+      <div class="projects-list">
+        <div class="project-card" *ngFor="let project of detailedProjects">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.details }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">Leistungsbereiche</h3>
     <div class="ref-grid">
-      <div class="ref-item">
-        <div class="ref-icon">🏢</div>
-        <h4>Wohnungsbau</h4>
-        <p>Planung der kompletten Haustechnik für Mehrfamilienhäuser und Wohnanlagen.</p>
-      </div>
-      <div class="ref-item">
-        <div class="ref-icon">🏫</div>
-        <h4>Öffentliche Einrichtungen</h4>
-        <p>Energiekonzepte und Sanierung von Schulen, Kitas und Verwaltungsgebäuden.</p>
-      </div>
-      <div class="ref-item">
-        <div class="ref-icon">🏭</div>
-        <h4>Gewerbe & Industrie</h4>
-        <p>Komplexe Klima- und Lüftungstechnik für Produktions- und Bürogebäude.</p>
+      <div class="ref-item" *ngFor="let category of categories">
+        <div class="ref-icon">{{ category.icon }}</div>
+        <h4>{{ category.title }}</h4>
+        <ul class="ref-list">
+          <li *ngFor="let item of category.items">{{ item }}</li>
+        </ul>
       </div>
     </div>
   </div>
